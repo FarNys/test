@@ -1,0 +1,21 @@
+.svg_square_box {
+  position: relative;
+}
+.square_container {
+  position: absolute;
+  top: calc(-5rem / 3);
+  width: 5rem;
+  height: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  > div:nth-child(2) {
+    box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+  }
+}
+.square_right {
+  right: calc(-5rem / 3);
+}
+.square_left {
+  left: calc(-5rem / 3);
+}

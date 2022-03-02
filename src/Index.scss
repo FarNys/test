@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+$border_rad_1: 0.5rem;
+$border_rad_2: 1rem;
+
+$color_1: #06bee1;
+$color_2: #c051ff;
+$color_3: #ee1b6c;
+$color_4: #13bb70;
+
+$color_text: #fff;
+$color_text_2: #323232;
+$color_text_3: #656565;
+
+@mixin tranSition {
+  transition: 0.3s ease all;
+}
+
+@mixin btnAnimate() {
+  @keyframes animatedButton {
+    0% {
+      padding: 0.8rem 1.5rem;
+    }
+    70% {
+      padding: 1rem 1.7rem;
+    }
+    100% {
+      padding: 0.9rem 1.6rem;
+    }
+  }
+}
+.global_btn_container {
+  display: flex;
+  margin: 2rem auto;
+  width: 100%;
+  align-items: center;
+  > ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 0;
+    > li {
+      list-style: none;
+      position: relative;
+      //   margin-right: 1rem;
+      height: 85px;
+      display: flex;
+      align-items: center;
+      width: 170px;
+      justify-content: center;
+      text-align: center;
+      > button {
+        padding: 0.85rem 1.5rem;
+        border: none;
+        border-radius: $border_rad_1;
+        transition: 0.3 ease all;
+        position: relative;
+        overflow: hidden;
+        > span {
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0.1);
+          opacity: 0;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: 0.3s ease all;
+        }
+
+        cursor: pointer;
+        &:hover {
+          animation-name: animatedButton;
+          animation-duration: 0.4s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease;
+          > span {
+            width: 200%;
+            height: 200%;
+            animation: rippleEffect 0.3s ease-in-out;
+          }
+        }
+      }
+      .btn_getstarted {
+        background-color: $color_2;
+        color: $color_text;
+        // margin-left: auto;
+      }
+      .btn_trydemo {
+        background-color: $color_4;
+        color: $color_text;
+        // margin-right: auto;
+      }
+      > span {
+        position: absolute;
+        width: 0;
+        height: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        pointer-events: none;
+        transition: 0.3 ease all;
+      }
+    }
+  }
+}
+@keyframes animatedButton {
+  0% {
+    padding: 0.85rem 1.5rem;
+  }
+  50% {
+    padding: 1rem 1.7rem;
+  }
+  70% {
+    padding: 0.9rem 1.6rem;
+  }
+  100% {
+    padding: 0.95rem 1.65rem;
+  }
+}
+@keyframes rippleEffect {
+  0% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  25% {
+    opacity: 1;
+    width: 100px;
+    height: 100px;
+  }
+  100% {
+    opacity: 0;
+    width: 300px;
+    height: 300px;
+  }
+}

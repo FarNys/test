@@ -1,0 +1,41 @@
+@import "../Index.scss";
+.feature_item_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  //   flex-direction: column;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  width: 85%;
+  min-width: 320px;
+  margin: 2rem auto;
+}
+.feature_item_box {
+  display: flex;
+  flex-direction: column;
+  > p {
+    margin-top: 1rem;
+  }
+}
+.feature_item_header {
+  display: flex;
+  align-items: center;
+  color: $color_3;
+
+  > h3 {
+    padding-left: 0.5rem;
+  }
+}
+@media (max-width: 1000px) {
+  .feature_item_container {
+    grid-template-columns: 1fr;
+    .feature_item_box {
+      padding-bottom: 1rem;
+      margin-top: 1rem;
+      border-bottom: 1px solid $color_3;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
