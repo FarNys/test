@@ -28,7 +28,7 @@ const Navbar = () => {
       }, 50);
     }
     console.log("Enter");
-    console.log(getIndex);
+    // console.log(getIndex);
   };
 
   const hoverLeaveHandler = (e) => {
@@ -36,6 +36,16 @@ const Navbar = () => {
     getLists.forEach((el) => {
       el.classList.remove("dynamic_hover");
     });
+    if (getIndex === null) {
+      const getOut = document.querySelectorAll(".navbar_dynamic_content");
+      // console.log(getOut);
+      getOut.forEach((el) => {
+        el.style.transition = "0.3s ease all";
+        setTimeout(() => {
+          el.style.visibility = "hidden";
+        }, 50);
+      });
+    }
     console.log("Leave");
     console.log(getIndex);
   };

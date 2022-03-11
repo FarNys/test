@@ -5,9 +5,12 @@ import StorageIcon from "@mui/icons-material/Storage";
 import SquareSvg from "../Util/SquareSvg";
 import CodeIcon from "@mui/icons-material/Code";
 import "../Styles/FeatureComponent.scss";
-import { Fade, Bounce, AttentionSeeker } from "react-awesome-reveal";
+import { Fade, Bounce, AttentionSeeker, Zoom } from "react-awesome-reveal";
 import TopicCard from "../Util/TopicCard";
-
+import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
+import CottageIcon from "@mui/icons-material/Cottage";
+import CameraIcon from "@mui/icons-material/Camera";
+import SliderCards from "./SliderCards";
 const HomeMain = () => {
   return (
     <div className="homemain_container">
@@ -21,7 +24,7 @@ const HomeMain = () => {
         />
         <div className="home_main_header">
           <h5>TOP FEATURES</h5>
-          <h2>Build apps fast</h2>
+          <h1>Build apps fast</h1>
           <p>
             Building self-hosted, customizable, and performant content API has
             never been easier.
@@ -29,30 +32,94 @@ const HomeMain = () => {
         </div>
         <div className="feature_item_container">
           {/* SINGLE FEATURE ITEM */}
-          <Fade>
-            <div className="feature_item_box">
-              <div className="feature_item_header">
-                <CodeIcon />
-                <h3>Code Editor</h3>
-              </div>
+          <Fade delay={300} duration={1000}>
+            <Zoom cascade>
+              <div className="feature_item_box">
+                <div className="feature_item_header">
+                  <Zoom delay={1000} duration={500}>
+                    <CodeIcon />
+                  </Zoom>
+                  <h3>Code Editor</h3>
+                </div>
 
-              <p>
-                Forever. The entire codebase is available on GitHub and
-                maintained by hundreds of contributors.
-              </p>
-            </div>
+                <p>
+                  Forever. The entire codebase is available on GitHub and
+                  maintained by hundreds of contributors.
+                </p>
+              </div>
+            </Zoom>
           </Fade>
           {/* SINGLE FEATURE END */}
-          <div className="feature_item_box">
-            <div className="feature_item_header">
-              <StorageIcon />
-              <h3>Self-hosted</h3>
-            </div>
-            <p>
-              Don’t give up on data privacy or lock yourself in. Keep control of
-              your data and your costs at all time.
-            </p>
-          </div>
+          {/* SINGLE FEATURE ITEM */}
+          <Fade delay={300} duration={1000}>
+            <Zoom cascade>
+              <div className="feature_item_box">
+                <div className="feature_item_header">
+                  <Zoom delay={1000} duration={500}>
+                    <StorageIcon />
+                  </Zoom>
+                  <h3>Self-hosted</h3>
+                </div>
+                <p>
+                  Don’t give up on data privacy or lock yourself in. Keep
+                  control of your data and your costs at all time.
+                </p>
+              </div>
+            </Zoom>
+          </Fade>
+          {/* SINGLE FEATURE END */}
+          {/* SINGLE FEATURE ITEM */}
+          <Fade delay={300} duration={1000}>
+            <Zoom cascade>
+              <div className="feature_item_box">
+                <div className="feature_item_header">
+                  <Zoom delay={1000} duration={500}>
+                    <LocalHospitalIcon />
+                  </Zoom>
+                  <h3>Emergency</h3>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Expedita unde neque aspernatur ad nemo et omnis distinctio quo
+                  quibusdam facere!
+                </p>
+              </div>
+            </Zoom>
+          </Fade>
+          {/* SINGLE FEATURE END */}
+          {/* SINGLE FEATURE ITEM */}
+          <Fade delay={300} duration={1000}>
+            <Zoom cascade>
+              <div className="feature_item_box">
+                <div className="feature_item_header">
+                  <Zoom delay={1000} duration={500}>
+                    <CottageIcon />
+                  </Zoom>
+                  <h3>Cottage</h3>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+            </Zoom>
+          </Fade>
+          {/* SINGLE FEATURE END */}
+          {/* SINGLE FEATURE ITEM */}
+          <Fade delay={300} duration={1000}>
+            <Zoom cascade>
+              <div className="feature_item_box">
+                <div className="feature_item_header">
+                  <Zoom delay={1000} duration={500}>
+                    <CameraIcon />
+                  </Zoom>
+                  <h3>Camera</h3>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                  neque rem expedita inventore quae consequatur?
+                </p>
+              </div>
+            </Zoom>
+          </Fade>
+          {/* SINGLE FEATURE END */}
         </div>
         <SquareSvg
           fillColorDark="#ee1b6c"
@@ -60,10 +127,7 @@ const HomeMain = () => {
           posLeft={true}
         />
       </div>
-      <TopicCard
-        text="Get set up in minutes to build projects in hours instead of weeks."
-        title="Drastically shorten your time-to-deploy."
-      />
+      <SliderCards />
     </div>
   );
 };

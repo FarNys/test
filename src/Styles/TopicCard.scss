@@ -6,9 +6,9 @@
   background-color: #91d3ff;
   border-radius: $border_rad_2;
   width: fit-content;
-  margin: 1rem auto;
+  margin: 2rem auto;
   max-width: 600px;
-  width: 90%;
+  width: 95%;
   .topic_card_header {
     display: flex;
     align-items: center;
@@ -16,7 +16,7 @@
       color: $color_3;
       font-size: 2rem;
     }
-    > h3 {
+    h3 {
       margin-left: 1rem;
     }
   }

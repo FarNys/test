@@ -2,19 +2,21 @@
 .feature_item_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 2rem;
   //   flex-direction: column;
   padding: 1rem;
   padding-bottom: 2rem;
   width: 85%;
   min-width: 320px;
-  margin: 2rem auto;
+  margin: 6rem auto;
 }
 .feature_item_box {
   display: flex;
   flex-direction: column;
+  margin: 3rem auto;
   > p {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
   }
 }
 .feature_item_header {
@@ -26,7 +28,7 @@
     padding-left: 0.5rem;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .feature_item_container {
     grid-template-columns: 1fr;
     .feature_item_box {
