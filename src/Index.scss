@@ -37,12 +37,14 @@ $color_text_3: #656565;
 }
 .global_btn_container {
   display: flex;
-  margin: 2rem auto;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   width: 100%;
-  align-items: center;
+  align-items: flex-start;
   > ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     padding: 1rem 0;
     > li {

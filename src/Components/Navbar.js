@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "../Styles/Navbar.scss";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Fade, Bounce, AttentionSeeker } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [index, setindex] = useState(0);
@@ -280,6 +281,9 @@ const Navbar = () => {
         {/* EVERY SINGLE ITEM END */}
         <div className="navbar_side_content">Git Hub</div>
       </nav>
+      <li>
+        <Link to="/why-aibi">Why</Link>
+      </li>
     </div>
   );
 };

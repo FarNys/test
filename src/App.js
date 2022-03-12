@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import About from "./Pages/About";
 import "./App.scss";
+import Why from "./Pages/Why/Why";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       <Switch>
         <Route path="/" exact>
           <Home />
+        </Route>
+        <Route path="/why-aibi" exact>
+          <Why />
         </Route>
         <Route path="/about" exact>
           <About />

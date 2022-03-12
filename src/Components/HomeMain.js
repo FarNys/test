@@ -5,7 +5,13 @@ import StorageIcon from "@mui/icons-material/Storage";
 import SquareSvg from "../Util/SquareSvg";
 import CodeIcon from "@mui/icons-material/Code";
 import "../Styles/FeatureComponent.scss";
-import { Fade, Bounce, AttentionSeeker, Zoom } from "react-awesome-reveal";
+import {
+  Fade,
+  Bounce,
+  AttentionSeeker,
+  Zoom,
+  Slide,
+} from "react-awesome-reveal";
 import TopicCard from "../Util/TopicCard";
 import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
 import CottageIcon from "@mui/icons-material/Cottage";
@@ -33,7 +39,7 @@ const HomeMain = () => {
         <div className="feature_item_container">
           {/* SINGLE FEATURE ITEM */}
           <Fade delay={300} duration={1000}>
-            <Zoom cascade>
+            <Slide cascade direction="up">
               <div className="feature_item_box">
                 <div className="feature_item_header">
                   <Zoom delay={1000} duration={500}>
@@ -47,12 +53,12 @@ const HomeMain = () => {
                   maintained by hundreds of contributors.
                 </p>
               </div>
-            </Zoom>
+            </Slide>
           </Fade>
           {/* SINGLE FEATURE END */}
           {/* SINGLE FEATURE ITEM */}
           <Fade delay={300} duration={1000}>
-            <Zoom cascade>
+            <Slide cascade direction="up">
               <div className="feature_item_box">
                 <div className="feature_item_header">
                   <Zoom delay={1000} duration={500}>
@@ -65,12 +71,12 @@ const HomeMain = () => {
                   control of your data and your costs at all time.
                 </p>
               </div>
-            </Zoom>
+            </Slide>
           </Fade>
           {/* SINGLE FEATURE END */}
           {/* SINGLE FEATURE ITEM */}
           <Fade delay={300} duration={1000}>
-            <Zoom cascade>
+            <Slide cascade direction="up">
               <div className="feature_item_box">
                 <div className="feature_item_header">
                   <Zoom delay={1000} duration={500}>
@@ -84,12 +90,12 @@ const HomeMain = () => {
                   quibusdam facere!
                 </p>
               </div>
-            </Zoom>
+            </Slide>
           </Fade>
           {/* SINGLE FEATURE END */}
           {/* SINGLE FEATURE ITEM */}
           <Fade delay={300} duration={1000}>
-            <Zoom cascade>
+            <Slide cascade direction="up">
               <div className="feature_item_box">
                 <div className="feature_item_header">
                   <Zoom delay={1000} duration={500}>
@@ -99,12 +105,12 @@ const HomeMain = () => {
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
               </div>
-            </Zoom>
+            </Slide>
           </Fade>
           {/* SINGLE FEATURE END */}
           {/* SINGLE FEATURE ITEM */}
           <Fade delay={300} duration={1000}>
-            <Zoom cascade>
+            <Slide cascade direction="up">
               <div className="feature_item_box">
                 <div className="feature_item_header">
                   <Zoom delay={1000} duration={500}>
@@ -117,7 +123,7 @@ const HomeMain = () => {
                   neque rem expedita inventore quae consequatur?
                 </p>
               </div>
-            </Zoom>
+            </Slide>
           </Fade>
           {/* SINGLE FEATURE END */}
         </div>
