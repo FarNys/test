@@ -283,6 +283,7 @@ const Navbar = () => {
       </nav>
       <li>
         <Link to="/why-aibi">Why</Link>
+        <Link to="/features">Features</Link>
       </li>
     </div>
   );

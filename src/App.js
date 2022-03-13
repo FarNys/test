@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar";
 import About from "./Pages/About";
 import "./App.scss";
 import Why from "./Pages/Why/Why";
+import { Features } from "./Pages/Features/Features";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route path="/why-aibi" exact>
           <Why />
+        </Route>
+        <Route path="/features" exact>
+          <Features />
         </Route>
         <Route path="/about" exact>
           <About />
