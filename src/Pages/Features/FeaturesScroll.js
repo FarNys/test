@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import {
@@ -12,15 +12,15 @@ import {
 const FeaturesScroll = () => {
   //   let inHeight = innerHeight;
   gsap.registerPlugin(ScrollTrigger);
-  useEffect(() => {
+  useLayoutEffect(() => {
     const getEl = document.querySelector(".feature_scroll_card");
     console.log(getEl.clientHeight);
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: ".features_scroll_container",
+          trigger: ".features_scroll_inner",
           start: "top top",
-          end: "bottom top",
+          end: "bottom center",
           // markers: true,
           scrub: true,
           pin: true,
