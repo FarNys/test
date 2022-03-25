@@ -1,15 +1,17 @@
 @import "../../Index.scss";
 .features_container {
   min-height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
   background-color: $color_text;
 }
 .features_header_container {
   height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 .features_header_box {
   position: relative;
+
   margin: auto;
   padding-top: 6rem;
   width: 90%;
@@ -276,7 +278,7 @@
   border-radius: 1rem;
   &:hover {
     .features_grid_grid_card_back {
-      animation: card-animate 0.2s ease both;
+      animation: card-animate 0.4s linear both;
     }
   }
 }
@@ -313,7 +315,7 @@
   height: 100%;
   box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
-  animation: card-animate-static 0.2s ease forwards;
+  animation: card-animate-static 0.4s ease forwards;
   .animated-line {
     position: absolute;
     bottom: 20px !important;
@@ -329,22 +331,28 @@
 }
 @keyframes card-animate {
   30% {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
   60% {
-    transform: scale(1.03);
+    transform: scale(1.01);
   }
 
   100% {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 }
 @keyframes card-animate-static {
-  30% {
-    transform: scale(0.98);
-  }
-  60% {
+  0% {
     transform: scale(1.02);
+  }
+  30% {
+    transform: scale(1.01);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.01);
   }
   100% {
     transform: scale(1);
@@ -353,8 +361,10 @@
 //FEATURES SCROLL STYLE
 .features_scroll_container {
   width: 100%;
+  overflow: hidden;
 }
 .features_scroll_inner {
+  overflow: hidden;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
@@ -438,7 +448,73 @@
 .scroll_icon {
   font-size: 2rem;
 }
-//
+//FEATURE DATA STYLE
 .features_data_container {
   min-height: 100vh;
+  width: 100%;
+  border: 2px solid red;
+}
+.features_data_inner {
+  margin: auto;
+  padding-top: 4rem;
+  background-color: antiquewhite;
+  max-width: 1440px;
+  width: 95%;
+  position: relative;
+  display: flex;
+  // justify-content: space-around;
+  min-height: 100vh;
+}
+.stick {
+  position: sticky;
+  top: 0;
+  border: 1px solid blue;
+  z-index: 100;
+}
+.features_data_img_container {
+  border: 5px solid red;
+  min-width: 70%;
+  position: relative;
+  .features_data_parent_img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .features_data_child_img_1 {
+    position: absolute;
+    top: -8px;
+    transform: scale(0.8);
+    transform-origin: bottom right;
+    width: 100%;
+    right: 8px;
+    opacity: 1;
+  }
+
+  .features_data_child_img_2 {
+    position: absolute;
+    top: -8px;
+    transform: scale(0.8);
+    transform-origin: bottom right;
+    width: 100%;
+    right: 8px;
+    opacity: 0;
+  }
+}
+.features_data_text_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  .features_data_card {
+    position: absolute;
+    border: 1px solid red;
+    height: 300px;
+    opacity: 0;
+  }
+  .features_data_card_1 {
+    opacity: 1;
+  }
+}
+.extra {
+  min-height: 200vh;
 }
