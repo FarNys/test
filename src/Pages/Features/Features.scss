@@ -448,73 +448,162 @@
 .scroll_icon {
   font-size: 2rem;
 }
-//FEATURE DATA STYLE
+
+//FEATURE DATA START STYLE
 .features_data_container {
   min-height: 100vh;
   width: 100%;
-  border: 2px solid red;
+}
+.features_data_spacer {
+  height: 100px;
+  // background-color: antiquewhite;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
 }
 .features_data_inner {
   margin: auto;
+  // background-color: antiquewhite;
+
   padding-top: 4rem;
-  background-color: antiquewhite;
   max-width: 1440px;
   width: 95%;
   position: relative;
   display: flex;
+
   // justify-content: space-around;
   min-height: 100vh;
 }
-.stick {
-  position: sticky;
-  top: 0;
-  border: 1px solid blue;
-  z-index: 100;
-}
+
+//NORMAL FEATURES IMAGE
 .features_data_img_container {
-  border: 5px solid red;
-  min-width: 70%;
-  position: relative;
+  // border: 5px solid blue;
+  margin: auto;
+  width: 100%;
+  max-width: 1440px;
+  top: 20%;
+  left: 0;
+  z-index: 10;
+  position: sticky;
+  perspective: 1500px;
+
   .features_data_parent_img {
-    width: 100%;
+    width: calc(200px + 40%);
     position: absolute;
     left: 0;
     top: 0;
+    transform: scale(1);
+    animation: img-parent-animate-left 0.5s ease forwards;
   }
-  .features_data_child_img_1 {
+  .features_data_child_img {
     position: absolute;
-    top: -8px;
-    transform: scale(0.8);
-    transform-origin: bottom right;
-    width: 100%;
-    right: 8px;
+    top: 0;
+    transform-origin: center right;
+    width: calc(200px + 40%);
+    left: 8px;
     opacity: 1;
+    animation: img-child-animate-left 0.5s ease forwards;
   }
+}
 
-  .features_data_child_img_2 {
-    position: absolute;
-    top: -8px;
-    transform: scale(0.8);
-    transform-origin: bottom right;
-    width: 100%;
-    right: 8px;
-    opacity: 0;
+//ANIMATE PARENT TO RIGHT SIDE
+@keyframes img-parent-animate-right {
+  40% {
+    transform: rotateY(-20deg) translateX(calc(150px + 30vw)) scale(0.9);
+  }
+  70% {
+    transform: rotateY(-20deg) translateX(calc(90px + 30vw)) scale(0.9);
+  }
+  100% {
+    transform: rotateY(-20deg) translateX(calc(100px + 30vw)) scale(0.9);
   }
 }
-.features_data_text_container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  .features_data_card {
-    position: absolute;
-    border: 1px solid red;
-    height: 300px;
-    opacity: 0;
+//ANIMATE CHILD TO RIGHT SIDE
+@keyframes img-child-animate-right {
+  40% {
+    transform: scale(0.7) rotateY(-15deg) translateX(calc(100px + 35vw))
+      translateY(5%);
   }
-  .features_data_card_1 {
-    opacity: 1;
+  70% {
+    transform: scale(0.7) rotateY(-15deg) translateX(calc(100px + 35vw))
+      translateY(-3%);
+  }
+  100% {
+    transform: scale(0.7) rotateY(-15deg) translateX(calc(100px + 35vw))
+      translateY(0%);
   }
 }
-.extra {
-  min-height: 200vh;
+//ANIMATE PARENT TO LEFT SIDE
+@keyframes img-parent-animate-left {
+  40% {
+    transform: rotateY(20deg) translateX(0) scale(1.05);
+  }
+  70% {
+    transform: rotateY(20deg) translateX(0) scale(0.98);
+  }
+  100% {
+    transform: rotateY(20deg) translateX(0) scale(1);
+  }
+}
+//ANIMATE CHILD TO RIGHT SIDE
+@keyframes img-child-animate-left {
+  40% {
+    transform: scale(0.78) rotateY(20deg) translateX(0) translateY(5%);
+  }
+  70% {
+    transform: scale(0.73) rotateY(20deg) translateX(0) translateY(-3%);
+  }
+  100% {
+    transform: scale(0.75) rotateY(20deg) translateX(0) translateY(0);
+  }
+}
+
+.features_data_inner {
+  width: 95%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .features_data_grid_content {
+    // border: 1px solid blue;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: -10rem;
+    position: relative;
+    h5 {
+      color: $color_4;
+      // max-width: 20vw;
+    }
+    h4 {
+      margin-top: 2rem;
+      color: $color_5;
+      max-width: 300px;
+    }
+    p {
+      margin-top: 2rem;
+      max-width: 300px;
+    }
+  }
+  .features_data_grid_content_shape_left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 80%;
+    margin-top: 4rem;
+    background-color: $color_5;
+    clip-path: polygon(0 0, 0 50%, 100% 0);
+  }
+  .features_data_grid_content_shape_right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 80%;
+    margin-top: 4rem;
+    background-color: $color_5;
+    clip-path: polygon(100% 50%, 0 100%, 100% 100%);
+  }
 }
