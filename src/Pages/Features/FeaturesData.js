@@ -73,16 +73,16 @@ const FeaturesData = () => {
     const getParentImg = document.querySelector(".features_data_parent_img");
     const getChildImg = document.querySelector(".features_data_child_img");
     const getContent = document.querySelector(".features_data_inner");
-    const gridHeight = getContent.offsetTop;
 
     //ADD LISTENER TO ADD SCROLL EFFECT
     window.addEventListener("scroll", () => {
       //CURRENT SCROLL POSITION + CURRENT HEIGHT OF DISPLAY (PX)
+      const gridHeight = getContent.offsetTop;
       const currScroll = window.scrollY;
       const currViewHeight = document.documentElement.clientHeight;
 
       //CONDITION TO CHANGE ANIMATION NAME AND IMG SRC
-      if (gridHeight + currViewHeight > currScroll) {
+      if (gridHeight + 600 > currScroll) {
         getChildImg.src = imgSrc[0];
         getChildImg.style.transformOrigin = "bottom right";
         getParentImg.style.animation =
@@ -90,7 +90,7 @@ const FeaturesData = () => {
         getChildImg.style.animation =
           "img-child-animate-left 0.5s ease forwards";
       }
-      if (gridHeight + currViewHeight < currScroll) {
+      if (gridHeight + 600 < currScroll) {
         getChildImg.src = imgSrc[1];
         getChildImg.style.transformOrigin = "bottom center";
         getParentImg.style.animation =
@@ -99,8 +99,8 @@ const FeaturesData = () => {
           "img-child-animate-right 0.5s ease forwards";
       }
       if (
-        gridHeight + currViewHeight * 2 < currScroll &&
-        gridHeight + currViewHeight * 3 > currScroll
+        gridHeight + 600 * 2 < currScroll &&
+        gridHeight + 600 * 3 > currScroll
       ) {
         getChildImg.style.transformOrigin = "bottom right";
         getChildImg.src = imgSrc[2];
@@ -110,8 +110,9 @@ const FeaturesData = () => {
           "img-child-animate-left 0.5s ease forwards";
       }
       if (
-        gridHeight + currViewHeight * 3 < currScroll &&
-        gridHeight + currViewHeight * 4 > currScroll
+        gridHeight + 600 * 3 <
+        currScroll
+        // gridHeight + 600 * 4 > currScroll
       ) {
         getChildImg.style.transformOrigin = "bottom center";
         getChildImg.src = imgSrc[3];

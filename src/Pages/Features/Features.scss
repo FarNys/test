@@ -509,32 +509,35 @@
 //ANIMATE PARENT TO RIGHT SIDE
 @keyframes img-parent-animate-right {
   40% {
-    transform: rotateY(-20deg) translateX(calc(150px + 30vw)) scale(0.9);
+    transform: rotateY(-20deg) translateX(calc(150px + 30vw)) scale(0.8);
   }
   70% {
-    transform: rotateY(-20deg) translateX(calc(90px + 30vw)) scale(0.9);
+    transform: rotateY(-20deg) translateX(calc(90px + 30vw)) scale(0.8);
   }
   100% {
-    transform: rotateY(-20deg) translateX(calc(100px + 30vw)) scale(0.9);
+    transform: rotateY(-20deg) translateX(calc(100px + 30vw)) scale(0.8);
   }
 }
 //ANIMATE CHILD TO RIGHT SIDE
 @keyframes img-child-animate-right {
   40% {
-    transform: scale(0.7) rotateY(-15deg) translateX(calc(100px + 35vw))
-      translateY(5%);
-  }
-  70% {
-    transform: scale(0.7) rotateY(-15deg) translateX(calc(100px + 35vw))
+    transform: scale(0.65) rotateY(-15deg) translateX(calc(100px + 40vw))
       translateY(-3%);
   }
+  70% {
+    transform: scale(0.65) rotateY(-15deg) translateX(calc(100px + 40vw))
+      translateY(-9%);
+  }
   100% {
-    transform: scale(0.7) rotateY(-15deg) translateX(calc(100px + 35vw))
-      translateY(0%);
+    transform: scale(0.65) rotateY(-15deg) translateX(calc(100px + 40vw))
+      translateY(-7%);
   }
 }
 //ANIMATE PARENT TO LEFT SIDE
 @keyframes img-parent-animate-left {
+  0% {
+    transform: translateX(calc(100px + 30vw));
+  }
   40% {
     transform: rotateY(20deg) translateX(0) scale(1.05);
   }
@@ -547,6 +550,9 @@
 }
 //ANIMATE CHILD TO RIGHT SIDE
 @keyframes img-child-animate-left {
+  0% {
+    transform: translateX(calc(100px + 35vw));
+  }
   40% {
     transform: scale(0.78) rotateY(20deg) translateX(0) translateY(5%);
   }

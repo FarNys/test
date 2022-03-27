@@ -11,7 +11,7 @@ const Header = () => {
         </span>
         <p>StrapiConf 2022 is coming soon 🎤</p>
       </div>
-      <div className="headet_title">
+      <div className="header_title">
         <h1>Design APIs fast, manage content easily.</h1>
       </div>
       <div className="header_line_long">
@@ -20,7 +20,7 @@ const Header = () => {
           fully customizable and developer-first.
         </h4>
       </div>
-      <div className="headet_btn_container global_btn_container">
+      <div className="header_btn_container global_btn_container">
         <ul>
           <ButtonEffect text="Get Started" classTitle="btn_getstarted" />
           {/* <button className="btn_trydemo">
