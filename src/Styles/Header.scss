@@ -2,9 +2,10 @@
 .header_container {
   width: 80%;
   min-width: 320px;
-  margin: 2rem auto;
+  margin: auto;
   display: flex;
   flex-direction: column;
+  padding-top: 10rem;
 }
 .header_line_short {
   display: flex;

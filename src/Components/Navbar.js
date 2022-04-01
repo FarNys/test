@@ -9,6 +9,29 @@ const Navbar = () => {
   const [getLists, setgetLists] = useState([]);
   const listControl = useRef(null);
 
+  //CHANGE BACKGROUND NAVBAR AFTER SCROLL
+  useEffect(() => {
+    const getNav = document.querySelector(".navbar_container");
+    const changeStyle = () => {
+      if (window.scrollY > 100) {
+        getNav.classList.add("navbar_container_scroll");
+        console.log(window.scrollY);
+      } else {
+        getNav.classList.remove("navbar_container_scroll");
+        console.log(window.scrollY);
+      }
+    };
+    window.addEventListener("scroll", () => {
+      changeStyle();
+      console.log("ADD");
+    });
+    return () => {
+      window.removeEventListener("scroll", () => {
+        changeStyle();
+        console.log("REMOVE");
+      });
+    };
+  }, []);
   useEffect(() => {
     const getElements = document.querySelectorAll(".navbar_dynamic_content");
     setgetLists(getElements);

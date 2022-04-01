@@ -73,41 +73,43 @@ const FeaturesData = () => {
     const getParentImg = document.querySelector(".features_data_parent_img");
     const getChildImg = document.querySelector(".features_data_child_img");
     const getContent = document.querySelector(".features_data_inner");
-
+    const footer = document.querySelector(".footer_container");
     //ADD LISTENER TO ADD SCROLL EFFECT
     window.addEventListener("scroll", () => {
       //CURRENT SCROLL POSITION + CURRENT HEIGHT OF DISPLAY (PX)
       const gridHeight = getContent.offsetTop;
       const currScroll = window.scrollY;
       const currViewHeight = document.documentElement.clientHeight;
+      const footerHeight = footer.offsetTop;
+      console.log(footerHeight);
 
       //CONDITION TO CHANGE ANIMATION NAME AND IMG SRC
       if (gridHeight + 600 > currScroll) {
-        getChildImg.src = imgSrc[0];
         getChildImg.style.transformOrigin = "bottom right";
         getParentImg.style.animation =
           "img-parent-animate-left 0.5s ease forwards";
         getChildImg.style.animation =
           "img-child-animate-left 0.5s ease forwards";
+        getChildImg.src = imgSrc[0];
       }
       if (gridHeight + 600 < currScroll) {
-        getChildImg.src = imgSrc[1];
         getChildImg.style.transformOrigin = "bottom center";
         getParentImg.style.animation =
           "img-parent-animate-right 0.5s ease forwards";
         getChildImg.style.animation =
           "img-child-animate-right 0.5s ease forwards";
+        getChildImg.src = imgSrc[1];
       }
       if (
         gridHeight + 600 * 2 < currScroll &&
         gridHeight + 600 * 3 > currScroll
       ) {
         getChildImg.style.transformOrigin = "bottom right";
-        getChildImg.src = imgSrc[2];
         getParentImg.style.animation =
           "img-parent-animate-left 0.5s ease forwards";
         getChildImg.style.animation =
           "img-child-animate-left 0.5s ease forwards";
+        getChildImg.src = imgSrc[2];
       }
       if (
         gridHeight + 600 * 3 <
@@ -115,14 +117,19 @@ const FeaturesData = () => {
         // gridHeight + 600 * 4 > currScroll
       ) {
         getChildImg.style.transformOrigin = "bottom center";
-        getChildImg.src = imgSrc[3];
         getParentImg.style.animation =
           "img-parent-animate-right 0.5s ease forwards";
         getChildImg.style.animation =
           "img-child-animate-right 0.5s ease forwards";
+        getChildImg.src = imgSrc[3];
+      }
+      if (footerHeight < currScroll + 800) {
+        getTarget.style.visibility = "hidden";
+      } else {
+        getTarget.style.visibility = "visible";
       }
 
-      console.log(gridHeight, currScroll, currViewHeight);
+      console.log(gridHeight, currScroll, footerHeight, currViewHeight, footer);
     });
   }, []);
 

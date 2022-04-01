@@ -1,12 +1,9 @@
 import React from "react";
 
-const ButtonEffect = ({
-  text = "Add A Name",
-  classTitle = "btn_getstarted",
-}) => {
+const ButtonEffect = ({ text = "Add A Name", classTitle }) => {
   return (
     <li>
-      <button className={classTitle}>
+      <button className={`btn_getstarted ${classTitle}`}>
         {text} <span></span>
       </button>
     </li>

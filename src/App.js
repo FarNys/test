@@ -6,6 +6,8 @@ import About from "./Pages/About";
 import "./App.scss";
 import Why from "./Pages/Why/Why";
 import { Features } from "./Pages/Features/Features";
+import Footer from "./Components/Footer";
+import NavbarMenu from "./Components/NavbarMenu";
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       {/* <Router> */}
       {/* <ScrollToTop /> */}
       <Navbar />
+      <NavbarMenu />
       {/* <SliderMenu /> */}
       <Switch>
         <Route path="/" exact>
@@ -28,6 +31,7 @@ function App() {
           <About />
         </Route>
       </Switch>
+      <Footer />
 
       {/* </Router> */}
     </div>

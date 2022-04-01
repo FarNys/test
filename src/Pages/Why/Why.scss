@@ -5,6 +5,7 @@
   width: 100%;
   position: relative;
   min-height: 100vh;
+  overflow: hidden;
   //   top: -70px;
 }
 //WHY HEADER STARTED HERE **************************
@@ -68,6 +69,7 @@
   width: 100%;
   height: 600px;
   background-color: $color_text;
+  // overflow-x: hidden;
 }
 .why_section_img_container {
   position: absolute;
