@@ -15,6 +15,7 @@ import FeaturesContent from "./FeaturesContent";
 import FeaturesGrid from "./FeaturesGrid";
 import FeaturesScroll from "./FeaturesScroll";
 import FeaturesData from "./FeaturesData";
+import FeaturesDataMobile from "./FeaturesDataMobile";
 export const Features = () => {
   return (
     <div className="features_container">
@@ -54,6 +55,7 @@ export const Features = () => {
       <FeaturesGrid />
       <FeaturesScroll />
       <FeaturesData />
+      <FeaturesDataMobile />
     </div>
   );
 };

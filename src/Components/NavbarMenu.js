@@ -14,7 +14,6 @@ const NavbarMenu = () => {
       } else {
         getNav.classList.remove("navbarmenu_container_scroll");
       }
-      console.log(getNav);
     });
     console.log(getNav);
   }, []);
@@ -55,24 +54,63 @@ const NavbarMenu = () => {
         <div className="navbarmenu_menu_items_container">
           <div className="navbarmenu_menu_item">
             <h4>PRODUCTS</h4>
-            <a href="#">Design</a>
-            <a href="#">Manage</a>
-            <a href="#">Content</a>
-            <a href="#">Easily</a>
+            <a href="#">
+              Design<span></span>
+            </a>
+            <a href="#">
+              Manage<span></span>
+            </a>
+            <a href="#">
+              Content<span></span>
+            </a>
+            <a href="#">
+              Easily<span></span>
+            </a>
           </div>
           <div className="navbarmenu_menu_item">
             <h4>PRODUCTS</h4>
-            <a href="#">Design</a>
-            <a href="#">Manage</a>
-            <a href="#">Content</a>
-            <a href="#">Easily</a>
+            <a href="#">
+              Design<span></span>
+            </a>
+            <a href="#">
+              Manage<span></span>
+            </a>
+            <a href="#">
+              Content<span></span>
+            </a>
+            <a href="#">
+              Easily<span></span>
+            </a>
           </div>
           <div className="navbarmenu_menu_item">
             <h4>PRODUCTS</h4>
-            <a href="#">Design</a>
-            <a href="#">Manage</a>
-            <a href="#">Content</a>
-            <a href="#">Easily</a>
+            <a href="#">
+              Design<span></span>
+            </a>
+            <a href="#">
+              Manage<span></span>
+            </a>
+            <a href="#">
+              Content<span></span>
+            </a>
+            <a href="#">
+              Easily<span></span>
+            </a>
+          </div>
+          <div className="navbarmenu_menu_item">
+            <h4>PRODUCTS</h4>
+            <a href="#">
+              Design<span></span>
+            </a>
+            <a href="#">
+              Manage<span></span>
+            </a>
+            <a href="#">
+              Content<span></span>
+            </a>
+            <a href="#">
+              Easily<span></span>
+            </a>
           </div>
         </div>
       </div>

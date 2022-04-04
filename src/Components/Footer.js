@@ -1,5 +1,7 @@
 import React from "react";
 import "./../Styles/Footer.scss";
+import { AiFillTrademarkCircle } from "react-icons/ai";
+
 const Footer = () => {
   return (
     <div className="footer_container">
@@ -46,6 +48,12 @@ const Footer = () => {
             <a href="#">Integration v5</a>
           </div>
         </div>
+      </div>
+      <div className="allright_container">
+        Allright reserved{" "}
+        <span>
+          <AiFillTrademarkCircle />
+        </span>
       </div>
     </div>
   );
