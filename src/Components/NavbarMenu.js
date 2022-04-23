@@ -27,6 +27,9 @@ const NavbarMenu = () => {
     const getMenu = document.querySelector(".navbarmenu_menu_container");
     getMenu.classList.remove("navbarmenu_menu_container_open");
     getMenu.classList.add("navbarmenu_menu_container_close");
+    setTimeout(() => {
+      getMenu.classList.remove("navbarmenu_menu_container_close");
+    }, 500);
   };
 
   return (

@@ -8,6 +8,7 @@ import Why from "./Pages/Why/Why";
 import { Features } from "./Pages/Features/Features";
 import Footer from "./Components/Footer";
 import NavbarMenu from "./Components/NavbarMenu";
+import Blog from "./Pages/Blog/Blog";
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route path="/features" exact>
           <Features />
+        </Route>
+        <Route path="/blog" exact>
+          <Blog />
         </Route>
         <Route path="/about" exact>
           <About />
