@@ -80,7 +80,15 @@ const Navbar = () => {
         { title: "iS This First", list: ["Item 1", "Item 2"] },
         {
           title: "Strapi 2",
-          list: ["Item 1", "Item 2", "Item 2", "Item 2", "Item 2", "Item 2"],
+          list: [
+            <Link to="/features">Feature</Link>,
+            <Link to="/why-aibi">Why AIBI</Link>,
+            <Link to="/blog">Blog</Link>,
+            "Item 2",
+            "Item 2",
+            "Item 2",
+            "Item 2",
+          ],
         },
       ],
       rightSide: [
